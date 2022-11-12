@@ -1,0 +1,130 @@
+/* Copyright © 2012 Balafun Series. All Rights Reserved. */
+
+#toolbar {
+	position: absolute;
+	left: 1px;
+	top: 49px;
+	width: 48px;
+	z-index: 1;
+	overflow: hidden;
+}
+
+#toolbar-page {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 48px;
+}
+
+.widget {
+    background-color: #daff7f; /*#212121*/
+    background-size: contain;
+	border-radius: 10px;
+	left: 1px;
+	width:46px;
+	height:46px;
+}
+
+.widget-moveup {
+	-webkit-transform : translateY(-48px);
+    -webkit-transition-property : -webkit-transform;
+    -webkit-transition-duration : 0.5s;
+    -webkit-transition-timing-function : ease-out;
+}
+
+.widget-movedown {
+	-webkit-transform : translateY(48px);
+    -webkit-transition-property : -webkit-transform;
+    -webkit-transition-duration : 0.5s;
+    -webkit-transition-timing-function : ease-out;
+}
+
+#toolbar-colorPicker {
+	position: absolute;
+	background-image: url('../img/colorPicker-button.png');
+}
+
+#toolbar-brushTool {
+	position: absolute;
+	background-image: url('../img/brush-button.png');
+}
+
+#toolbar-pencilTool {
+    position: absolute;
+    background-image: url('../img/pencil-button.png');
+}
+
+#toolbar-eraserTool {
+    position: absolute;
+    background-image: url('../img/eraser-button.png');
+}
+
+#toolbar-eyeDropperTool {
+    position: absolute;
+    background-image: url('../img/eyeDropper-button.png');
+}
+
+#toolbar-opacityTool {
+	position: absolute;
+	background-image: url('../img/opacity-button.png');
+}
+
+#toolbar-cleanBrush {
+	position: absolute;
+	background-image: url('../img/clean-button.png');
+}
+
+#toolbar-clearCanvas {
+	position: absolute;
+	background-image: url('../img/clear-button.png');
+}
+
+#toolbar-gallery {
+	position: absolute;
+	background-image: url('../img/gallery-button.png');
+}
+
+#toolbar-handTool {
+	position: absolute;
+	background-image: url('../img/handTool-button.png');
+}
+
+#toolbar-settings {
+	position: absolute;
+	background-image: url('../img/settings-button.png');
+}
+
+#toolbar-info {
+    position: absolute;
+    background-image: url('../img/info-button.png');
+}
+
+#toolbar-imageTool {
+    position: absolute;
+    background-image: url('../img/image-button.png');
+}
+
+#toolbar-imageTool input {
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+#toolbar-layers {
+	position: absolute;
+	background-image: url('../img/layers-button.png');
+}
+
+#toolbar-reference {
+	position: absolute;
+	background-image: url('../img/reference-button.png');
+}
+
+#toolbar-historyPrev {
+	position: absolute;
+	background-image: url('../img/prev-button.png');
+}
+
+#toolbar-historyNext {
+	position: absolute;
+	background-image: url('../img/next-button.png');
+}

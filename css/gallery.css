@@ -1,0 +1,143 @@
+
+/* Copyright © 2012 Balafun Series. All Rights Reserved. */
+
+#save {
+	position: relative;
+	margin: 0 auto;
+	width: 160px;
+	height: 140px;
+	top: 25%;
+}
+
+#save-name {
+	width: 160px;
+}
+
+#save-yes-btn {
+	float: left;
+}
+
+#save-no-btn {
+	float: right;
+}
+
+#save-close {
+	position: absolute;
+	background-image: url('../img/close.png') no-repeat center center;
+	right: 5px;
+	top: 5px;
+	width: 9px;
+	height: 7px;
+}
+
+#gallery {
+	position: absolute;
+	background: #171717;
+	width: 100%;
+	height: 100%;
+}
+
+#gallery-header {
+    position: relative;
+    text-align: center;
+    top: 2px;
+}
+
+#gallery-header-content {
+    position: relative;
+    display: inline-block;
+}
+
+#gallery-logo {
+    position: relative;
+    background-image: url('../img/logo.png');
+    width: 72px;
+    height: 86px;
+    float: left;
+}
+
+#gallery-new {
+    position: absolute;
+    left: 0px;
+    top: 90px;
+    width: 100%;
+    height: 46px;
+    border-bottom: 1px solid #000000;
+}
+
+#gallery-edit {
+	position: absolute;
+	left: 0px;
+	top: 90px;
+	width: 100%;
+	height: 46px;
+	border-bottom: 1px solid #000000;
+}
+
+#gallery-export {
+    position: absolute;
+    left: 0px;
+    top: 90px;
+    width: 100%;
+    height: 46px;
+    border-bottom: 1px solid #000000;
+}
+
+#gallery-files {
+	position: absolute;
+    background-image: url('../img/gallery-files.png');
+    border-top: 2px solid #000000;
+    overflow-y: auto;
+    left: 0px;
+    top: 90px;
+    bottom: 24px;
+    width: 100%;
+}
+
+#gallery-footer {
+    position: absolute;
+    color: white;
+    border-top: 2px solid #000000;
+    text-align: center;
+    line-height: 24px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 24px;
+}
+
+.fileItem {
+	display: inline-block;
+	margin: 4px 4px 0px 4px;
+	width: 152px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.fileItem .img {
+    background-color: #5e5e5e;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 150px;
+    height: 150px;
+}
+
+.fileItem p {
+    color: white;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#gallery-files-newProject .img {
+     background-image: url('../img/gallery-new.png');
+}
+
+.files-slidedown {
+    -webkit-transform : translateY(48px);
+    -webkit-transition-property : -webkit-transform;
+    -webkit-transition-duration : 0.1s;
+    -webkit-transition-timing-function : ease-out;
+}

@@ -1,0 +1,20 @@
+{"title":"Playback","description":"Paletta playback file","commands":[
+{"id":"setBrushColor","color":16711680},
+{"id":"setBrushSize","paintTool":0,"size":28},
+{"id":"setBrushSize","paintTool":1,"size":1},
+{"id":"setBrushSize","paintTool":2,"size":32},
+{"id":"setBrushOpacity","opacity":100},
+{"id":"setPaintTool","paintTool":0},
+{"id":"newProject","canvasWidth":800,"canvasHeight":600,"bgColor":-1},
+{"id":"updateTransform","tx":0,"ty":0,"s":1,"r":0},
+{"id":"beginStroke","pageX":386,"pageY":303,"pressure":0.0771484375},
+{"id":"moveStroke","pageX":386,"pageY":303,"pressure":0.1669921875},
+{"id":"moveStroke","pageX":386,"pageY":303,"pressure":0.25},
+{"id":"moveStroke","pageX":386,"pageY":303,"pressure":0.35},
+{"id":"moveStroke","pageX":386,"pageY":303,"pressure":0.45},
+{"id":"moveStroke","pageX":386,"pageY":303,"pressure":0.5},
+{"id":"moveStroke","pageX":386,"pageY":303,"pressure":0.45},
+{"id":"moveStroke","pageX":386,"pageY":303,"pressure":0.35},
+{"id":"moveStroke","pageX":386,"pageY":303,"pressure":0.215},
+{"id":"endStroke"}
+]}

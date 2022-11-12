@@ -1,0 +1,192 @@
+﻿
+/* Copyright © 2012 Balafun Series. All Rights Reserved. */
+
+#colorPicker {
+	position: absolute;
+	cursor: move;
+	background: #646464;
+	border-radius: 5px;
+	width:240px;
+	height:266px;
+	left: 20px;
+	top: 20px;
+}
+
+#colorPicker-close {
+    position: absolute;
+    cursor: default;
+    background: url('../img/close.png') no-repeat center center;
+    right: 5px;
+    top: 5px;
+    width: 9px;
+    height: 7px;
+}
+
+.colorPicker-tabs {
+    position: absolute;
+    cursor: default;
+    top: -16px;
+    left: 8px;
+    list-style: none;
+    height: 30px;
+    line-height: 26px;
+    padding: 0;
+}
+.colorPicker-tabs:before {
+    position: absolute;
+    content: " ";
+    width: 238px;
+    bottom: 0px;
+    left: -8px;
+    border-bottom: 1px solid #929292;
+    z-index: 1;
+}
+.colorPicker-tabs li {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #4b4b4b;
+    background: #646464;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 2px 2px #808080, inset 0 1px 0 #D1D1D1;
+    margin: 0px -5px;
+    padding: 0px 10px;
+    z-index: 0;
+}
+.colorPicker-tabs li:before,
+.colorPicker-tabs li:after {
+    position: absolute;
+    border: 1px solid #929292;
+    bottom: -3px;
+    width: 5px;
+    height: 5px;
+    content: " ";
+}
+.colorPicker-tabs li:before {
+    left: -5px;
+    border-bottom-right-radius: 5px;
+    border-width: 0 1px 1px 0;
+    box-shadow: 2px 2px 0 #646464;
+}
+.colorPicker-tabs li:after {
+    right: -5px;
+    border-bottom-left-radius: 5px;
+    border-width: 0 0 1px 1px;
+    box-shadow: -2px 2px 0 #646464;
+}
+.colorPicker-tabs li.selected {
+    background: #808080;
+    border-bottom-color: #808080;
+    z-index: 1;
+}
+.colorPicker-tabs li.selected:before {
+    box-shadow: 2px 2px 0 #808080;
+}
+.colorPicker-tabs li.selected:after {
+    box-shadow: -2px 2px 0 #808080;
+}
+
+/***************************************************************/
+
+#colorPicker-colors {
+    position: absolute;
+    background: #808080;
+    top: 30px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    z-index: 1;
+}
+
+#colorPicker-valuePanel {
+	position:absolute;
+	cursor: crosshair;
+	background: url('../img/colorPicker-value.png');
+	left: 6px;
+	top: 4px;
+	width: 200px;
+	height: 200px;
+}
+
+#colorPicker-valueKnob {
+	position: absolute;
+	cursor: crosshair;
+	background: url('../img/colorPicker-valueKnob.gif');
+	width: 11px;
+	height: 11px;
+}
+
+#colorPicker-huePanel {
+	position: absolute;
+	cursor: crosshair;
+	background: url('../img/colorPicker-hue.png');
+	left: 212px;
+	top: 4px;
+	width: 22px;
+	height: 200px;
+}
+
+#colorPicker-hueKnob {
+	position: absolute;
+	cursor: crosshair;
+	background: url('../img/colorPicker-hueKnob.gif');
+	left: -3px;
+	width: 29px;
+	height: 3px;
+}
+
+#colorPicker-R {
+    position:absolute;
+    left:5px;
+    bottom: 4px;
+    vertical-align: middle;
+    line-height:24px;
+}
+
+#colorPicker-G {
+    position:absolute;
+    left:74px;
+    bottom: 4px;
+    vertical-align: middle;
+    line-height:24px;
+}
+
+#colorPicker-B {
+    position:absolute;
+    left:143px;
+    bottom: 4px;
+    vertical-align: middle;
+    line-height:24px;
+}
+
+.colorPicker-RGBValue {
+	position: absolute;
+	cursor: default;
+	width:40px;
+	border:1px solid #7f9db9;
+	padding-left:3px;
+}
+
+/***************************************************************/
+
+#colorPicker-swatches {
+    position: absolute;
+    cursor: default;
+    background: #808080;
+    top: 30px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    z-index: 1;
+    padding: 2px 3px;
+}
+
+
+.swatch {
+    display: inline-block;
+    box-shadow: inset 0px 0px 5px #646464;
+    width: 27px;
+    height: 27px;
+    margin: 1px 1px;
+    float : left;
+}

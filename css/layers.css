@@ -1,0 +1,216 @@
+
+/* Copyright © 2012 Balafun Series. All Rights Reserved. */
+
+#layers {
+	position: absolute;
+	cursor: move;
+	background: #646464;
+	border-radius: 5px;	
+	width: 280px;
+	height: 440px;
+	left: 20px;
+	top: 20px;
+}
+
+#layers-header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 280px;
+	height: 39px;
+	border-bottom: 1px solid #000000;
+	vertical-align: middle;
+}
+
+#layers-container {
+	position: absolute;
+	background: #b0b0b0;
+	top: 40px;
+	left: 0px;
+	width: 280px;
+	height: 400px;
+	overflow: hidden;
+}
+
+#layers-page {
+	position: absolute;	
+	cursor: auto;
+	top: 0px;
+	left: 0px;
+	width: 280px;
+}
+
+#layers-title {
+	text-align: center;
+	line-height: 40px;
+}
+
+#layers-add {
+	position: absolute;	
+	cursor: auto;
+	background: url('../img/layer-add.png');
+	top: 8px; 
+	left: 16px;
+	width: 24px;
+	height: 24px;
+}
+
+#layers-duplicate{
+	position: absolute;
+	cursor: auto;
+	background: url('../img/layer-duplicate.png');
+	top: 8px; 
+	left: 52px;
+	width: 24px;
+	height: 24px;
+}
+
+#layers-merge{
+	position: absolute;
+	cursor: auto;
+	background: url('../img/layer-merge.png');
+	top: 8px; 
+	right: 52px;
+	width: 24px;
+	height: 24px;
+}
+
+#layers-delete{
+	position: absolute;
+	cursor: auto;
+	background: url('../img/layer-delete.png');
+	top: 8px; 
+	right: 16px;
+	width: 24px;
+	height: 24px;
+}
+
+#layers-close {
+	position: absolute;
+	cursor: auto;
+	cursor: default;
+	background: url('../img/close.png') no-repeat center center;		
+	right: 5px;
+	top: 5px;
+	width: 9px;
+	height: 7px;
+}
+
+.layer {
+	position: absolute;
+	background: #7f7f7f;
+	left: 0px;
+	width: 279px;
+	height: 99px;
+	border-top: 1px solid #b0b0b0;
+}
+
+.layer-moveup {
+	-webkit-transform : translateY(-100px);    
+    -webkit-transition-property : -webkit-transform;
+    -webkit-transition-duration : 0.5s;
+    -webkit-transition-timing-function : ease-out;
+}
+
+.layer-movedown {
+	-webkit-transform : translateY(100px);    
+    -webkit-transition-property : -webkit-transform;
+    -webkit-transition-duration : 0.5s;
+    -webkit-transition-timing-function : ease-out;
+}
+
+.layer-visible {
+	position: absolute;
+	background: url('../img/layer-visible.png');
+	left: 34px;
+	top: 38px;
+	width: 24px;
+	height: 24px;
+}
+
+.layer-opacity {
+	position: absolute;
+	background-color: #DAFF7F;
+	left: 8px;
+	top: 8px;
+	width: 23px;
+	height: 23px;
+	border: 1px solid #DAFF7F;
+	border-radius: 50%;
+}
+
+.layer-blendMode {
+	position: absolute;
+	cursor: default;
+	background: #DAFF7F;
+	left: 60px;
+	bottom: 8px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 24px;
+}
+
+.layer-preview {
+	position: absolute;
+	background: url('../img/layer-background.png');
+	left: 92px;
+	top: 2px;	
+	width: 96px;
+	height: 96px;
+	border-radius: 3px;
+}
+
+.layer-number {
+	position: absolute;
+	cursor: default;
+	right: 36px;
+	top: 12px;
+	width: 20px;
+	text-align: center;
+}
+
+.layer-thumb {
+	position: absolute;
+	background: url('../img/layer-thumb.png');
+	right: 24px;
+	top: 41px;
+	width: 44px;
+	height: 17px;
+}
+
+
+.layer-locked {
+	position: absolute;
+	background: url('../img/layer-lock.png');
+	left: 166px;
+	bottom: 0px;
+	width: 24px;
+	height: 24px;	
+}
+
+#selectLayerOpacity {
+	position: absolute;
+	background-color: #ffffff;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: 1px solid #000000;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 48px;
+	z-index: 5;
+}
+
+#selectLayerBlendMode {
+	position: absolute;	
+	background-color: #ffffff;
+	width: 96px;
+	height: 48px;
+	border-radius: 50%;
+	border: 1px solid #000000;
+	text-align: center;
+	line-height: 48px;
+	z-index: 5;
+}

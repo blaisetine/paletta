@@ -1,0 +1,98 @@
+
+/* Copyright © 2012 Balafun Series. All Rights Reserved. */
+
+#viewport {
+	position: fixed;
+	touch-action: none;
+	width: 100%;
+	height: 100%;
+	min-width: 320px;
+	min-height: 320px;
+}
+
+#mainframe {
+	position: absolute;
+	background: #151515;
+	width: 100%;
+	height: 100%;
+}
+
+#canvas {
+	position: absolute;
+	-webkit-transform-origin: 50% 50%;
+	left:0px;
+	top: 0px;
+}
+
+.canvas_draw {
+    cursor: crosshair;
+}
+
+.canvas_move {
+    cursor: move;
+}
+
+#startButton {
+	position: absolute;
+	border-radius: 10px;
+	background-image: url('../img/start-button.png');
+	left: 1px;
+	top: 1px;
+	width:46px;
+    height:46px;
+    text-align: center;
+    line-height: 46px;
+	z-index: 2;
+}
+
+#eyeDropper {
+	position: absolute;
+	cursor: crosshair;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border:2px solid #a1a1a1;
+    background-position: 0px 0px;
+    background-color: white;
+    background-repeat:no-repeat;
+	background-origin:content-box;
+	z-index: 98;  /* max value-2 */
+}
+
+.control {
+	background: #646464;
+	z-index: 3;
+	box-shadow:	2px 2px 2px rgba(0,0,0,0.5), inset 0px 0px 1px rgba(0,0,0,1);
+}
+
+.dialog {
+	background: #646464;
+	border-radius: 10px;
+	box-shadow:	2px 2px 2px rgba(0,0,0,0.5), inset 0px 0px 1px rgba(0,0,0,1);
+	padding: 20px;
+	z-index: 100;  /* max value */
+}
+
+#dialog-overlay {
+	position: absolute;
+	background: white;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	z-index: 99;  /* max value-1 */
+}
+
+#debug {
+	position: absolute;
+	left: 0px;
+	bottom : 0px;
+	z-index: 9999;
+}
+
+#oauth-page {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}

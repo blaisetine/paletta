@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- Copyright � 2022 Blaise Tine. All Rights Reserved. -->
+<!-- html manifest="paletta.appcache" -->
+<html>
+<head>
+    <title>Paletta</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Online Digital Canvas" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+    <link rel="icon" href="icons/icon.png">
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="css/common.css" />
+    <link type="text/css" rel="stylesheet" href="css/colorPicker.css" />
+    <link type="text/css" rel="stylesheet" href="css/toolbar.css" />
+    <link type="text/css" rel="stylesheet" href="css/gallery.css" />
+    <link type="text/css" rel="stylesheet" href="css/layers.css" />
+    <link type="text/css" rel="stylesheet" href="css/reference.css" />
+    <link type="text/css" rel="stylesheet" href="css/settings.css" />
+    <link type="text/css" rel="stylesheet" href="css/info.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<body onload="main();">
+    <div id="viewport">
+        <div id="gallery">
+            <div id="gallery-header">
+                <div id="gallery-header-content"><div id="gallery-logo"></div></div>
+            </div>
+            <div id="gallery-new" style="display:none">
+                <input id="gallery-color" type="color" value="#ffffff">
+                <input id="gallery-width" type="number" min="1" max="2048" value="0">
+                <input id="gallery-height" type="number" min="1" max="2048" value="0">
+                <input id="gallery-create-btn" class="button" type="submit" value="Create">
+            </div>
+            <div id="gallery-edit" style="display:none">
+                <input id="gallery-open-btn" class="button" type="submit" value="Open">
+                <input id="gallery-delete-btn" class="button" type="submit" value="Erase">
+                <input id="gallery-export-btn" class="button" type="submit" value="Export">
+            </div>
+            <div id="gallery-export" style="display:none">
+                <input id="gallery-export-devianart-btn" class="button" type="submit" value="devianart">
+                <input id="gallery-export-facebook-btn" class="button" type="submit" value="facebook">
+                <input id="gallery-export-dropbox-btn" class="button" type="submit" value="dropbox">
+                <input id="gallery-export-gallery-btn" class="button" type="submit" value="gallery">
+            </div>
+            <div id="gallery-files"><div id="gallery-files-newProject" class="fileItem"><div class="img"></div></div></div>
+            <div id="gallery-footer">© 2022 Blaise Tine</div>
+        </div>
+        <div id="mainframe" style="display:none">
+            <canvas id="canvas" width="0" height="0" class="canvas_draw">Sorry, your browser doesn't support canvas technology.</canvas>
+            <div id="startButton"></div>
+            <div id="toolbar" style="display:none">
+                <div id="toolbar-page"></div>
+            </div>
+            <div id="layers" style="display:none" class="control">
+                <div id="layers-header">
+                    <div id="layers-close"></div>
+                    <div id="layers-title">Layers</div>
+                    <div id="layers-add"></div>
+                    <div id="layers-duplicate"></div>
+                    <div id="layers-merge"></div>
+                    <div id="layers-delete"></div>
+                </div>
+                <div id="layers-container">
+                    <div id="layers-page"></div>
+                </div>
+            </div>
+            <div id="reference" style="display:none" class="control">
+                <input id="reference-file" type="file" accept="image/*" style="visibility:hidden;">
+                <input id="reference-file-browse-btn" class="button" type="submit" onclick="document.getElementById('reference-file').click();" value="Browse...">
+                <div id="reference-close"></div>
+                <div id="reference-image">
+                    <canvas id="reference-canvas"></canvas>
+                </div>
+                <div id="reference-resize"></div>
+            </div>
+            <div id="colorPicker" style="display:none" class="control">
+                <ul class="colorPicker-tabs">
+                    <li id="colorPicker-tabs-colors" class="selected">colors</li>
+                    <li id="colorPicker-tabs-swatches">swatches</li>
+                </ul>
+                <div id="colorPicker-close"></div>
+                <div id="colorPicker-colors">
+                    <div id="colorPicker-valuePanel">
+                        <div id="colorPicker-valueKnob"></div>
+                    </div>
+                    <div id="colorPicker-huePanel">
+                        <div id="colorPicker-hueKnob"></div>
+                    </div>
+                    <div id="colorPicker-R">
+                        R:<input type="number" id="colorPicker-colorR" class="colorPicker-RGBValue" min="0" max="255"/>
+                    </div>
+                    <div id="colorPicker-G">
+                        G:<input type="number" id="colorPicker-colorG" class="colorPicker-RGBValue" min="0" max="255"/>
+                    </div>
+                    <div id="colorPicker-B">
+                        B:<input type="number" id="colorPicker-colorB" class="colorPicker-RGBValue" min="0" max="255"/>
+                    </div>
+                </div>
+                <div id="colorPicker-swatches" style="display:none"></div>
+            </div>
+            <div id="eyeDropper" style="display:none"></div>
+        </div>
+        <div id="dialog-overlay" style="display:none"></div>
+        <div id="save" style="display:none" class="dialog">
+            <div id="save-close"></div>
+            <p>Save Project?</p>
+            <input id="save-name" type="text" class="inputtext" maxlength="32">
+            <div class="linebreak"></div>
+            <input id="save-yes-btn" type="submit" class="button" value="  Yes  ">
+            <input id="save-no-btn" type="submit" class="button" value="   No  ">
+        </div>
+    </div>
+    <div id="fb-root"></div>
+    <script type="text/javascript" src="js/indexedDB.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>   
+	<script type="text/javascript" src="js/matrix.js"></script>
+    <script type="text/javascript" src="js/touch.js"></script>	
+    <script type="text/javascript" src="js/fileData.js"></script>
+    <script type="text/javascript" src="js/fileDataDB.js"></script>
+    <script type="text/javascript" src="js/pageSlider.js"></script>
+    <script type="text/javascript" src="js/bubbleCtrl.js"></script>
+    <script type="text/javascript" src="js/blendOps.js"></script>
+    <script type="text/javascript" src="js/dirtyRects.js"></script>
+    <script type="text/javascript" src="js/history.js"></script>
+    <script type="text/javascript" src="js/layers.js"></script>
+    <script type="text/javascript" src="js/info.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/reference.js"></script>
+    <script type="text/javascript" src="js/colorPicker.js"></script>
+    <script type="text/javascript" src="js/eyeDropper.js"></script>
+    <script type="text/javascript" src="js/paintTools.js"></script>
+    <script type="text/javascript" src="js/handTool.js"></script>
+    <script type="text/javascript" src="js/imageTool.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
+    <script type="text/javascript" src="js/toolbar.js"></script>
+    <script type="text/javascript" src="js/device.js"></script>
+	<script type="text/javascript" src="js/playback.js"></script> 
+	<script type="text/javascript" src="js/deviantArt-client.js"></script>
+    <script type="text/javascript" src="js/facebook-client.js"></script>
+    <script type="text/javascript" src="js/dropbox-client.js"></script>	
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

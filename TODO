@@ -1,0 +1,117 @@
+TODO:
+- the active layer bgcolor and element size should be defined in css, no javascript => solition: break classes into subclasses to selectively add/remove them in JS
+- the active toolbar bgcolor and element size should be defined in css, no javascript
+- toolbar controls on surface too small
+- palm rejection on surface broken
+- canvas resize using fingers
+- layer panel animzation sometimes hangs
+- reference close() from toolbar buggy  
+- toolbar widgets slot swapping sometimes hangs (no swap animation)
+- fix new canvas dimension when display orientation changes afterward
+- display handtool current transform info (x,y,w,h,rotation)
+- enable editing (hand tool transform) when importing images into layers
+- force new layer when importing images
+- save project settings (swatches, reference, opacity, pen size, brush size, eraser size)
+- add a progress bar when loading/saving paintings locally
+- add a progress bar when exporting paintings to remote servers
+- save project template and allow creation from saved templates
+- select tool for the canvas (cut, resize)
+- create a new painting from existing image
+- allow multiple reference panels (up to 4)
+- hand tool bubble dialog showing tx,ty, r, s
+- implement a direct keyboard input mode for toolbar controls
+- brush panel (allow brushes editing and setting current brush)
+- help - page creation
+- help - gallery tab
+- help - canvas tab
+- help - toolbar tab
+- help - layers tab
+- help - about tab
+- settings - autohide toolbar on draw
+- settings - page creation
+- settings - brush mixing coefficient
+- settings - gallery options turnon delay
+- settings - eyedropper turnon delay
+- settings - toolbar widgets move turnon delay
+- settings - layers widgets move turnon delay
+- resize colorpicker to 240x280
+- export project to multipage tiff
+- gather painting stats (number of strokes, etc...)
+- enable video recording
+- enable online figure drawing meetups (audio + text + 'select canvas to watch')
+- pen pressure sensitivity support
+
+Completed tasks:
+- DPI aware canvas size
+- bubbleCtrl reuse
+- handCtrl reuse
+- eraser separate toolbar
+- eraser separate size & opacity control
+- pencil separate toolbar
+- pencil separate size & opacity control
+- reference color picker
+- swatches
+- reference scale & move
+- new project - size & bgcolor settings
+- center the canvas on the screen
+- on rotate, do not rotate the canvas - cancelled
+- eraser antialiasing
+- BUG: fix IOS8 indexedDB fallback
+- export paintings to facebook
+- BUG: fix project file updates
+- defualt canvas location should not be centered
+- reference image should be selectable when no image exists
+- reference image should not use the whole space if not needed
+- randomize initial position of popup windows at first boot
+- automatically set top level popup window
+- history prev/next auto-enabled
+- dirty bursh causes dirty glass toolbar to be enabled
+- replace info toolbar icon with '?'
+- export paintings to devianart
+- download paintings to photo gallery
+- reference panel - enable eyedropper by default
+- add a background image to gallery page
+- merge layer + draw broken  (device.activeLayerIndex needs updates)
+- BUG: fix paletta to work on IE.
+- BUG: fix new project creation (reset history icons)
+- line rasterization DDA float to fixed point optimization
+- enable tracing features on reference panel (turn on tracing, adjusting opacity, hand tool editing) - use a layer + image import
+- resize canvas to centered fullscreen regardless of size (like in procreate)
+- smooth brush and pencil rendering using subpixel antialising
+- implement a pixel debugger which record mouse displacements and can replay them, export to file,
+- surface pro pen support
+- wacom tablets web plugin support
+- fix touch bug when switching between colorpicker dialog displacement and drawing on canvas
+
+ONLINE MEETUP FEATURES:
+- allow integration with social media - meetup.com, facebook, twitter, etc
+- audio chat
+- text messaging
+- select user canvas to watch
+- sharing reference image
+- sharing canvas template
+- sharing brushes
+- sharing swatches
+
+USAGE:
+- press hold the brush enables you to change the brush type.
+- press hold swatch will update the swatch color to current
+- press hold reference panel will select the color
+- move reference panel will move the panel
+- move reference panel with hand tool enabled will move resize/move the image inside the panel.
+
+RESOURCES:
+- transparent image tool: http://www194.lunapic.com/editor/
+- facebook app registration: https://developers.facebook.com/apps/
+- deviantart app registration: https://www.deviantart.com/developers/
+- dropbox app registration: https://www.dropbox.com/developers-v1/datastore/sdks/js
+- http://css-tricks.com/html5-progress-element
+- https://developers.facebook.com/docs/reference/apis/
+- https://github.com/deviantART
+- http://mobiarch.wordpress.com/2013/01/02/uploading-file-using-xmlhttprequest-level-2/
+- http://api.kde.org/bundled-apps-api/calligra-apidocs/krita/image/html/kis__painter_8cc_source.html
+
+TIPS:
+
+generating appcache files listing
+$ find "$PWD"

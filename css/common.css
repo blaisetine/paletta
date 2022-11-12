@@ -1,0 +1,43 @@
+/* Copyright © 2012 Balafun Series. All Rights Reserved. */
+
+body {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: medium;
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.button {
+	/*font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 10px 10px;
+	background: -moz-linear-gradient(top,#ffffff 0%,#b5b5b5);
+	background: -webkit-gradient(linear, left top, left bottom,from(#ffffff),to(#b5b5b5));
+	border-radius: 1px;
+	border: 1px solid #949494;
+	box-shadow:	0px 3px 3px rgba(000,000,000,0.5), inset 0px 0px 2px rgba(255,255,255,1);
+	text-shadow: 0px -1px 0px rgba(000,000,000,0.2), 0px 1px 0px rgba(255,255,255,1);*/
+}
+
+/*input[class="button"]:enabled {
+	color: #050505;
+}
+
+input[class="button"]:disabled {
+	color: #B5B5B5;
+}*/
+
+.inputtext {
+	border-style: none;
+}
+
+.linebreak {
+	float: none;
+	clear: both;
+	height: 10px;
+}

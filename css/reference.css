@@ -1,0 +1,51 @@
+
+/* Copyright © 2012 Balafun Series. All Rights Reserved. */
+
+#reference {
+    position: absolute;
+    cursor: move;
+    background: #646464;
+    border-radius: 5px;
+    width: 240px;
+    height: 320px;
+    left: 20px;
+    top: 20px;
+}
+
+#reference-file-browse-btn {
+    position: absolute;
+    cursor: default;
+    left: 5px;
+    top: 5px;
+}
+
+#reference-close {
+    position: absolute;
+    cursor: default;
+    background: url('../img/close.png') no-repeat center center;
+    right: 5px;
+    top: 5px;
+    width: 9px;
+    height: 7px;
+}
+
+#reference-resize {
+    position: absolute;
+    cursor: se-resize;
+    background: url('../img/resize.png') no-repeat center center;
+    right: 0px;
+    bottom: 0px;
+    width: 24px;
+    height: 24px;
+}
+
+#reference-image {
+    position: absolute;
+    cursor: default;
+    background: #ffffff;
+    left: 1px;
+    top: 40px;
+    right: 1px;
+    bottom: 1px;
+    overflow: hidden;
+}
