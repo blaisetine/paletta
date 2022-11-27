@@ -1,6 +1,4 @@
 
-![Paletta](paletta.png)
-
 Paletta is digital painting software that simulates oil painting via a proprietary color mixing algorithm.
 
 This software was implemented completly using HTML5, Javascript, and CSS,  and leverages Just-in-time compilation in the browser to deliver hight-speed rendering. 
@@ -11,6 +9,6 @@ The application has support for a traditional mouse input or touch, but you can 
 
 This was a fun project of mine for teaching my daughter how to mix colors :-).
 
-You can access the live application directly at the following URL:
+<img src="paletta.png" style="width:640px;"/>
 
-https://blaisetine.github.io/paletta
+[click here to draw!](https://blaisetine.github.io/paletta)
