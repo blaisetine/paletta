@@ -1,5 +1,5 @@
 
-![Paletta](img/logo.png)
+![Paletta](paletta.png)
 
 Paletta is digital painting software that simulates oil painting via a proprietary color mixing algorithm.
 
